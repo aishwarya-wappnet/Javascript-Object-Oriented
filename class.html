@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> class </title>
+    </head>
+    <body>
+
+    <!-- First Technique :- -->
+
+    <script>
+
+      class fullName {
+
+          constructor(surename, name, fathername)
+          {
+            this.surename = surename;
+            this.name = name;
+            this.fathername = fathername;
+          }
+
+          detais = function()
+          {
+            return ( ` The student name of student :- ${this.name}`);
+          }
+      }
+
+      let student1 = new fullName('Patel', 'Dixita', 'Vijaykumar');
+      let student2 = new fullName('Patel', 'Keyur', 'Vijaykumar');
+
+      document.write(student2.surename + "<br>");
+      document.write(student1.fathername + "<br>");
+      document.write(student2.detais());
+      </script>
+      <br>
+      <br>
+
+      <!-- Second Technique :- -->
+
+      <script>
+
+       function bank(x, y, z)
+       {
+           this.x = x;
+           this.y = y;
+           this.z = z;
+       };
+
+       bank.prototype.a = function()
+       {
+        return("The bank name is :- " + this.y);
+       }
+
+       let bank1 = new bank('mahesana', 'Axis', 'Sbi');
+       let bank2 = new bank('HDFC', 'Union', 'icici');
+
+       document.write(bank1.x + "<br>");
+       document.write(bank2.y + "<br>");
+       document.write(bank1.a());
+ 
+      </script>
+    </body>
+</html>
